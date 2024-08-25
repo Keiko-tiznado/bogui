@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/cs2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+/*!------- HEADER ------*/
+header{
+    background-color: brown;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    font-size: 60px;
+    color: #ffffff ;
+}
+
+header h1 span{
+    color: darkred;
+}
+
+header nav ul{
+    list-style:none;
+    display: flex;
+}
+header nav ul li{
+    margin: 20px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+header nav ul li a:hover{
+    color: darkred;
+}
+/*! -------- MAIN ------*/
+.hero{
+    width: 100%;
+    height: calc(100vh - 155px);
+    background-image: url(../img/cara\ principal1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero h2{
+    font-size: 50px;
+    border: 1px solid white;
+    display: inline-block;
+    padding: 15px;
+}
+.hero h2 span{
+    color: darkred;
+}
+.hero p{
+    font-size: 20px;
+    margin: 20px;
+    width: 50%;
+}
+.hero a{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    font-size: 18px;
+}
+.hero a:hover{
+    background-color: darkred;
+}
+.bienvenidos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+
+.bienvenidos div{
+    width: 50%;
+}
+
+.bienvenidos div h2{
+    font-size: 40px;
+}
+.bienvenidos div h2 span{
+    color: darkred;
+}
+.bienvenidos img{
+    width: 400px;
+    height: 500px;
+}
+/*---- PREFERIDOS -----*/
+.preferidos h2{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.preferidos .preferidos-contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.preferidos .preferidos-contenedor div{
+    width: 300px;
+    height: 350px;
+    border: 2px solid grey;
+    margin: 20px;
+    text-align: center;
+}
+.preferidos div img{
+    width: 100%;
+}
+.preferidos div h3{
+    margin-bottom: 20px;
+}
+.preferidos div a{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+}
+.preferidos div a:hover{
+   background-color: darkred;
+}
+/* ------- GRID -------- */
+.grid-galeria{
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+.grid-galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ------- IMG -------- */
+.img-4{
+    grid-column: span 2;
+}  
+.img-6{
+    grid-row: span 2;
+}
+.img-8{
+    grid-row: span 2;
+}
+
+.grid-item{
+    position: relative;
+}
+.grid-item h3{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.464);
+    color: white;
+    width: 100%;
+    padding: 5px;
+}
+.whatsapp a img{
+    width: 70px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+/*---- FOOTER ----*/
+
+footer{
+    background-color: rgb(80, 79, 79);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+footer .preferidos-derechos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer h2{
+    color: white;
+    font-size: 60px;
+}
+footer h2 span{
+    color: darkred;
+}
+footer div a img{
+    width: 50px;
+}
+footer .footer-derechos{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width:910px) {
+    .hero h2{
+        font-size: 40px;
+    }
+    .hero p{
+        font-size: 16px;
+    }
+    .hero a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:824px){
+    .grid-galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 220px;
+}
+    .grid-item{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .img-9{
+        grid-column: span 2;
+    }
+}
+
+/* ------- BIENVENIDOS A BOGUI -------- */
+@media screen and (max-width:686px) {
+    header{
+        flex-direction: column;
+    }
+/*--    .bienvenidos{
+        flex-direction: column;
+    }   --*/
+    .bienvenido img{
+        display: none;
+    }
+    .bienvenidos div{
+        width: 80%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+/* ------- EL LOREM COMO PARRAFO LO SACA -------- */
+@media screen and (max-width:527px) {
+    .hero p{
+        display: none;
+    }
+    .hero h2{
+        margin: 10px;
+    }
+}
+/* ------- EL LOREM SE AJUSTA CUANDO ENTRA UN MOVIL -------- */
+@media screen and (max-width:460px) {
+    header nav ul li a{
+        font-size: 12px;
+    }
+    header{
+        position: static;
+    }
+    header h1{
+        font-size: 40px;
+    }
+}
+/* ------- PARA ACHICAR EL TITULO(FUNDADA EN 1962) -------- */
+@media screen and (max-width:397px) {
+    .hero h2{
+        font-size: 30px;
+    }
+}
